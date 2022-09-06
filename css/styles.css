@@ -83,6 +83,7 @@ p {
   gap: 50px;
 }
 .top-line-item {
+  position: relative;
 }
 
 .top-line-link {
@@ -101,6 +102,20 @@ p {
 .top-line-link:focus,
 .current {
   color: var(--accent-color);
+}
+.top-line-link.active::after {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .contacts {
@@ -177,6 +192,7 @@ p {
   letter-spacing: 0.06em;
   color: var(--button-text-color);
   background-color: var(--accent-color);
+  border: none;
   cursor: pointer;
 }
 
@@ -248,9 +264,33 @@ p {
 }
 
 .items-item {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .image-items {
+}
+
+.relative {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.relative-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-top: 27px;
+
+  color: var(--button-text-color);
 }
 
 .section-team {
