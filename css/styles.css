@@ -371,7 +371,7 @@ p {
   border-radius: 4px;
   fill: var(--svg-color-icon);
 
-  transition: 250ms var(--cubic-bezier);
+  transition: fill 250ms var(--cubic-bezier), border 250ms var(--cubic-bezier);
 }
 
 .customers-title {
@@ -482,7 +482,8 @@ p {
   cursor: pointer;
   border: solid transparent;
 
-  transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier);
+  transition: color 250ms var(--cubic-bezier), background-color 250ms var(--cubic-bezier),
+    box-shadow 250ms var(--cubic-bezier);
 }
 
 .button-filter:hover,
